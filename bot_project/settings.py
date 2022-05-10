@@ -1,7 +1,8 @@
-Forms = {
-    "1": ["a", "b"],
-    "11": ["b", "a"]
-}
+import json
+
+
+with open("forms.json") as forms_file:
+    Forms = json.load(forms_file)
 
 Steps_num = 1
 # от 0 до 0

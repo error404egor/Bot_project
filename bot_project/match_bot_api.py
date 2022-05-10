@@ -109,10 +109,18 @@ def post_user_data():
         user.searching_sex = data.get("searching_sex", default=None, type=int)
 
     if data.get("watched_ids", default=None, type=str) is not None:
-        user.watched_ids = data.get("watched_ids", default=None, type=str)
+        try:
+            list(map(int, data.get("watched_ids", default=None, type=str).split()))
+            user.watched_ids = data.get("watched_ids", default=None, type=str)
+        except ValueError:
+            pass
 
     if data.get("users_liked_ids", default=None, type=str) is not None:
-        user.users_liked_ids = data.get("users_liked_ids", default=None, type=str)
+        try:
+            list(map(int, data.get("users_liked_ids", default=None, type=str).split()))
+            user.users_liked_ids = data.get("users_liked_ids", default=None, type=str)
+        except ValueError:
+            pass
 
     if data.get("last_watched_id", default=None, type=int) is not None:
         user.last_watched_id = data.get("last_watched_id", default=None, type=int)

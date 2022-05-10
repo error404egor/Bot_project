@@ -1,0 +1,6 @@
+flask
+io
+base64
+sqlalchemy
+requests
+python-telegram-api
