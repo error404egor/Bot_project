@@ -40,6 +40,8 @@ API.
                            названия параметров у post_user_data.
         get_user_to_watch_by_id_tg/<int:id_tg> - возвращает json с информацией о пользователе которого стоит посмотреть 
                            данному с такими же ключами, как названия параметров у post_user_data.
+    
+    url: http://egoryurov.pythonanywhere.com/
 
 
 BOT:
